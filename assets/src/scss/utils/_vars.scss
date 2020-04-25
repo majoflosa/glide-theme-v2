@@ -11,12 +11,12 @@ $font-secondary: Cambria, sans-serif;
     COLORS
 * = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 $color-primary: #f555aa;
-$color-primary-dark: darken($primary, 10%);
-$color-primary-light: lighten($primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
+$color-primary-light: lighten($color-primary, 10%);
 
 $color-secondary: #2290d4;
-$color-secondary-dark: darken($secondary, 10%);
-$color-secondary-light: lighten($secondary, 10%);
+$color-secondary-dark: darken($color-secondary, 10%);
+$color-secondary-light: lighten($color-secondary, 10%);
 
 $color-another: #83c0a2;
 
