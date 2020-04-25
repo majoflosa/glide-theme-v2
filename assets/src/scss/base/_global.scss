@@ -1,7 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,700|Overpass:400,600|Roboto+Mono');
+
 body {
     font-family: $font-body;
+    font-weight: 300;
+    color: $font-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-header;
+    font-weight: normal;
+    color: $font-color-dark;
+}
+
+a {
+    color: $color-secondary;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        text-decoration: underline;
+        color: $color-secondary-light;
+    }
+}
+
+code {
+    background-color: $gray20;
+    color: $gray70;
+    padding: rem(8) rem(14);
+    border-radius: $box-radius;
+
+    pre {
+        font-family: 'Roboto Mono', monospace;
+        font-size: rem(14);
+    }
+}
+
+.code-block {
+    display: block;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+    color: $font-color-dark;
 }

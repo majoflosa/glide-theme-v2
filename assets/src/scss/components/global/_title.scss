@@ -1,0 +1,22 @@
+.title-separator {
+    &-center {
+        &:after {
+            @include separator-title();
+            margin: rem(13) auto 0;
+        }
+    }
+
+    &-right {
+        &:after {
+            @include separator-title();
+            margin: rem(13) 0 0 auto;
+        }
+    }
+
+    &-left {
+        &:after {
+            @include separator-title();
+            margin: rem(13) 0 0;
+        }
+    }
+}

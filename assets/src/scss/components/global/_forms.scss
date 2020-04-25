@@ -1,0 +1,156 @@
+@mixin formSelectors($radius: $box-radius) {
+    display: inline-block;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    & + .radio-selector, & + .checkbox-selector {
+        display: inline-block;
+        padding: 3px 5px 1px;
+        font-size: 0.8em;
+        font-size: 0.8rem;
+        color: #ffffff;
+        box-sizing: border-box;
+        border: 2px solid $color-primary;
+        border-radius: $radius;
+        margin: 0 5px 0 0;
+    }
+    &:checked + .radio-selector, &:checked + .checkbox-selector {
+        border: none;
+        @include checkmark($color-primary, #ffffff, $radius);
+    }
+}
+
+@mixin fileInput($bg: $color-secondary, $color: #ffffff, $border: $color-secondary) {
+    @include btnGenerals();
+    border-color: $border;
+    border-radius: $box-radius;
+    background: $bg;
+    color: $color;
+    input[type="file"] {
+        display: inline-block;
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+    }
+    &:hover {
+        background: lighten($bg, 10%);
+        border-color: lighten($bg, 10%);
+    }
+}   
+    
+.form__item {
+    display: inline-block;
+    margin: 0 10px 20px 0;
+}
+
+.form__item-block {
+    display: block;
+    margin: 0 10px 20px 0;
+}
+
+label {
+    display: block;
+    margin: 0 0 5px;
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="email"], 
+input[type="search"], 
+input[type="date"], 
+input[type="url"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="datetime-local"], 
+input[type="time"], 
+input[type="week"], 
+textarea,
+select {
+    display: block;
+    padding: 8px 12px ;
+    box-sizing: border-box;
+    border-radius: $box-radius;
+    border: 1px solid $gray50;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    @include mainTransition();
+    
+    &.block-field {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    &:focus {
+        outline: none;
+        border-color: $color-primary-light;
+        border-width: 4px;
+        box-sizing: border-box;
+    }
+    &.error-field {
+        border-color: $color-third;
+    }
+    &::placeholder {
+        color: lighten($gray50, 15%);
+    }
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select {
+    height: 2.25em;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.radio-label {
+    display: inline-block;
+    cursor: pointer;
+    input[type="radio"] {
+        @include formSelectors(50%);
+    }
+}
+
+.checkbox-label {
+    display: inline-block;
+    cursor: pointer;
+    input[type="checkbox"] {
+        @include formSelectors(3px);
+    }
+}
+
+.file-label {
+    @include fileInput();
+}
+
+.file-label--border {
+    @include fileInput(transparent, $color-secondary);
+    &:hover {
+        background: $color-secondary;
+        border-color: $color-secondary;
+        color: #ffffff;
+    }
+}
+input[type="button"], input[type="submit"] {
+    @include mainBtn();
+}
+
+input[type="button"].primary-border {
+    @include borderBtn($color-primary);
+}
+
+input[type="button"].secondary {
+    @include mainBtn($color-secondary);
+}
+
+input[type="button"].secondary-border {
+    @include borderBtn($color-secondary);
+}
+
+input[type="reset"] {
+    @include borderBtn($gray50);
+}

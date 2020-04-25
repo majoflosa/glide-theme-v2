@@ -1,0 +1,26 @@
+.img-block {
+    width: 100%;
+}
+
+.img-left {
+    float: left;
+    margin: 0 rem(20) rem(20) 0;
+}
+
+.img-right {
+    float: right;
+    margin: 0 0 rem(20) rem(20);
+}
+
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.img-soft {
+    border-radius: $box-radius;
+}
+
+.img-round {
+    border-radius: 999px;
+}

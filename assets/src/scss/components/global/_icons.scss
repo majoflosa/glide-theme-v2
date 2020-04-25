@@ -1,0 +1,39 @@
+.bullet-check-circle-primary {
+    @include checkmark($color-primary-light, $color-primary, 99px);
+}
+.bullet-check-circle-secondary {
+    @include checkmark($color-secondary-light, $color-secondary, 99px);
+}
+.bullet-check-circle-third {
+    @include checkmark($color-third, $color-third-dark, 99px);
+}
+
+.bullet-check-square-primary {
+    @include checkmark($color-primary-light, $color-primary, 3px);
+}
+.bullet-check-square-secondary {
+    @include checkmark($color-secondary-light, $color-secondary, 3px);
+}
+.bullet-check-square-third {
+    @include checkmark($color-third, $color-third-dark, 3px);
+}
+
+.bullet-x-circle-primary {
+    @include xmark($color-primary-light, $color-primary, 99px);
+}
+.bullet-x-circle-secondary {
+    @include xmark($color-secondary-light, $color-secondary, 99px);
+}
+.bullet-x-circle-third {
+    @include xmark($color-third, $color-third-dark, 99px);
+}
+
+.bullet-x-square-primary {
+    @include xmark($color-primary-light, $color-primary, 3px);
+}
+.bullet-x-square-secondary {
+    @include xmark($color-secondary-light, $color-secondary, 3px);
+}
+.bullet-x-square-third {
+    @include xmark($color-third, $color-third-dark, 3px);
+}

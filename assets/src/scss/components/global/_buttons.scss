@@ -1,0 +1,219 @@
+@mixin btnGenerals {
+    display: inline-block;
+    padding: 8px 14px;
+    text-transform: uppercase;
+    border: 1px solid;
+    cursor: pointer;
+    font-family: $font-header;
+    font-size: inherit;
+    @include mainTransition();
+
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+@mixin mainBtn($color: $color-primary, $radius: $box-radius) {
+    @include btnGenerals();
+    background: $color;
+    color: #ffffff;
+    border-color: $color;
+    border-radius: $radius;
+
+    &:hover {
+        background: lighten($color, 10%);
+        border-color: lighten($color, 10%);
+    }
+}
+
+@mixin borderBtn($color: $color-primary, $radius: $box-radius) {
+    @include btnGenerals();
+    background: transparent;
+    color: $color;
+    border-color: $color;
+    border-radius: $radius;
+    
+    &:hover {
+        background: $color;
+        color: #ffffff;
+    }
+}
+    
+.btn--primary, a.btn--primary {
+    @include mainBtn($color-primary);
+}
+.btn--primary-border, a.btn--primary-border {
+    @include borderBtn($color-primary);
+}
+.btn--primary-dark, a.btn--primary-dark {
+    @include mainBtn($color-primary-dark);
+}
+.btn--primary-dark-border, a.btn--primary-dark-border {
+    @include borderBtn($color-primary-dark);
+}
+.btn--primary-light, a.btn--primary-light {
+    @include mainBtn($color-primary-light);
+}
+.btn--primary-light-border, a.btn--primary-light-border {
+    @include borderBtn($color-primary-light);
+}
+
+.btn--secondary, a.btn--secondary {
+    @include mainBtn($color-secondary);
+}
+.btn--secondary-border, a.btn--secondary-border {
+    @include borderBtn($color-secondary);
+}
+.btn--secondary-dark, a.btn--secondary-dark {
+    @include mainBtn($color-secondary-dark);
+}
+.btn--secondary-dark-border, a.btn--secondary-dark-border {
+    @include borderBtn($color-secondary-dark);
+}
+.btn--secondary-light, a.btn--secondary-light {
+    @include mainBtn($color-secondary-light);
+}
+.btn--secondary-light-border, a.btn--secondary-light-border {
+    @include borderBtn($color-secondary-light);
+}
+
+.btn--third, a.btn--third {
+    @include mainBtn($color-third);
+}
+.btn--third-border, a.btn--third-border {
+    @include borderBtn($color-third);
+}
+.btn--third-dark, a.btn--third-dark {
+    @include mainBtn($color-third-dark);
+}
+.btn--third-dark-border, a.btn--third-dark-border {
+    @include borderBtn($color-third-dark);
+}
+.btn--third-light, a.btn--third-light {
+    @include mainBtn($color-third-light);
+}
+.btn--third-light-border, a.btn--third-light-border {
+    @include borderBtn($color-third-light);
+}
+
+.btn--white, a.btn--white {
+    @include mainBtn(#ffffff);
+    color: $font-color;
+    &:hover {
+        color: $font-color;
+    }
+}
+.btn--white-border, a.btn--white-border {
+    @include borderBtn(#ffffff);
+    &:hover {
+        color: $font-color;
+    }
+}
+
+.btn--neutral, a.btn--neutral {
+    @include mainBtn($gray50);
+}
+.btn--neutral-border, a.btn--neutral-border {
+    @include borderBtn($gray50);
+}
+
+.btn--danger, a.btn--danger {
+    @include mainBtn($color-secondary);
+}
+.btn--danger-border, a.btn--danger-border {
+    @include borderBtn($color-secondary);
+}
+
+.btn--primary-disabled, a.btn--primary-disabled,
+.btn--primary:disabled, a.btn--primary:disabled {
+    @include mainBtn(lighten($color-primary, 40%));
+    cursor: initial;
+    &:hover {
+        background: lighten($color-primary, 40%);
+        border-color: lighten($color-primary, 40%);
+    }
+}
+
+.btn--secondary-disabled, a.btn--secondary-disabled,
+.btn--secondary:disabled, a.btn--secondary:disabled {
+    @include mainBtn(lighten($color-secondary, 22%));
+    cursor: initial;
+    &:hover {
+        background: lighten($color-secondary, 22%);
+        border-color: lighten($color-secondary, 22%);
+    }
+}
+
+.btn--third-disabled, a.btn--third-disabled,
+.btn--third:disabled, a.btn--third:disabled {
+    @include mainBtn(lighten($color-third, 22%));
+    cursor: initial;
+    &:hover {
+        background: lighten($color-third, 22%);
+        border-color: lighten($color-third, 22%);
+    }
+}
+
+.btn--neutral-disabled, a.btn--neutral-disabled,
+.btn--neutral:disabled, a.btn--neutral:disabled,
+.btn--danger-disabled, a.btn--danger-disabled,
+.btn--danger:disabled, a.btn--danger:disabled {
+    @include mainBtn(lighten($gray50, 22%));
+    cursor: initial;
+    &:hover {
+        background: lighten($gray50, 22%);
+        border-color: lighten($gray50, 22%);
+    }
+}
+
+.btn--primary-border-disabled, a.btn--primary-border-disabled,
+.btn--primary-border:disabled, a.btn--primary-border:disabled {
+    @include borderBtn(lighten($color-primary, 40%));
+    cursor: initial;
+    &:hover {
+        background: transparent;
+        color: lighten($color-primary, 40%);
+    }
+}
+
+.btn--secondary-border-disabled, a.btn--secondary-border-disabled,
+.btn--secondary-border:disabled, a.btn--secondary-border:disabled {
+    @include borderBtn(lighten($color-secondary, 22%));
+    cursor: initial;
+    &:hover {
+        background: transparent;
+        color: lighten($color-secondary, 22%);
+    }
+}
+
+.btn--third-border-disabled, a.btn--third-border-disabled,
+.btn--third-border:disabled, a.btn--third-border:disabled {
+    @include borderBtn(lighten($color-third, 22%));
+    cursor: initial;
+    &:hover {
+        background: transparent;
+        color: lighten($color-third, 22%);
+    }
+}
+
+.btn--neutral-border-disabled, a.btn--neutral-border-disabled,
+.btn--neutral-border:disabled, a.btn--neutral-border:disabled,
+.btn--danger-border-disabled, a.btn--danger-border-disabled,
+.btn--danger-border:disabled, a.btn--danger-border:disabled {
+    @include borderBtn(lighten($gray50, 22%));
+    cursor: initial;
+    &:hover {
+        background: transparent;
+        color: lighten($gray50, 22%);
+    }
+}
+
+.block-btn, a.block-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}

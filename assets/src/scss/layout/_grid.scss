@@ -39,3 +39,35 @@
         flex: 1 0 80%;
     }
 }
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.clearfix::before, .clearfix::after, .clearfix-before::before, .clearfix-after::after {
+    @include clearfix();
+}
+
+.no-margin {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.no-margin-top {
+    margin-top: 0 !important;
+}
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}

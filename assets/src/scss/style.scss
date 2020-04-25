@@ -1,5 +1,5 @@
 // import vendor
-// @import './vendors/fancybox';
+
 
 // import utils
 @import './utils/vars';
@@ -25,6 +25,9 @@
 @import './components/global/buttons';
 @import './components/global/forms';
 @import './components/global/icons';
+@import './components/global/images';
+@import './components/global/title';
+@import './components/global/modal';
 
 // import app-specific components
-// @import './components/app-card';
+@import './components/loading';
