@@ -1,0 +1,52 @@
+$base-pixel-size: 16;
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = *
+    FONTS
+* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+$font-header: Arial, sans-serif;
+$font-body: Helvetica, sans-serif;
+$font-secondary: Cambria, sans-serif;
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = *
+    COLORS
+* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+$color-primary: #f555aa;
+$color-primary-dark: darken($primary, 10%);
+$color-primary-light: lighten($primary, 10%);
+
+$color-secondary: #2290d4;
+$color-secondary-dark: darken($secondary, 10%);
+$color-secondary-light: lighten($secondary, 10%);
+
+$color-another: #83c0a2;
+
+$gray10: darken(white, 10%);
+$gray20: darken(white, 20%);
+$gray30: darken(white, 30%);
+$gray40: darken(white, 40%);
+$gray50: darken(white, 50%);
+$gray60: darken(white, 60%);
+$gray70: darken(white, 70%);
+$gray80: darken(white, 80%);
+$gray90: darken(white, 90%);
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = *
+    LAYOUT
+* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+$content-width: 1000px;
+$grid-gutter: 16px;
+
+// responsive breakpoints
+$breakpoints: (
+    xs: 360,
+    sm: 720,
+    md: 1024,
+    lg: 1392
+);
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = *
+    UTILS
+* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+$border: 1px solid $color-primary;
+$box-radius: 4px;
+$shadow: 0px 2px 2px rgba(black, 0.15);

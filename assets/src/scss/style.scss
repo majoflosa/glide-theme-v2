@@ -1,0 +1,30 @@
+// import vendor
+// @import './vendors/fancybox';
+
+// import utils
+@import './utils/vars';
+@import './utils/functions';
+@import './utils/mixins';
+
+// import base
+@import './base/normalize';
+@import './base/typography';
+@import './base/global';
+
+// import layout
+@import './layout/grid';
+@import './layout/nav';
+@import './layout/header';
+@import './layout/sidebar';
+@import './layout/footer';
+
+// import pages/views
+@import './pages/home';
+
+// import global components
+@import './components/global/buttons';
+@import './components/global/forms';
+@import './components/global/icons';
+
+// import app-specific components
+// @import './components/app-card';

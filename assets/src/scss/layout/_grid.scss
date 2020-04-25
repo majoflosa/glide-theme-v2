@@ -1,0 +1,41 @@
+.cols {
+    @include layout-flex(initial, initial, initial, wrap);
+
+    .col {
+        box-sizing: border-box;
+    }
+    .col-no-grow {
+        flex-grow: 0 !important;
+    }
+
+
+    .col-half {
+        flex: 1 0 50%;
+    }
+    .col-third {
+        flex: 1 0 33%;
+    }
+    .col-two-thirds {
+        flex: 1 0 66%;
+    }
+
+    .col-fourth {
+        flex: 1 0 25%;
+    }
+    .col-three-fourths {
+        flex: 1 0 75%;
+    }
+    
+    .col-fifth {
+        flex: 1 0 20%;
+    }
+    .col-two-fifths {
+        flex: 1 0 40%;
+    }
+    .col-three-fifths {
+        flex: 1 0 60%;
+    }
+    .col-four-fifths {
+        flex: 1 0 80%;
+    }
+}
