@@ -2,8 +2,15 @@ import $ from 'jquery';
 
 class BaseComponent {
     constructor(element, options) {
+        // environment
+        this.env = window.location.origin.match(/localhost/) ? 'development' : 'production';
+        this.isDevMode = this.env === 'development';
+        this.isProdMode = this.env === 'production';
+
         if (!element) {
-            throw new Error('No valid element provided.');
+            if (this.isDevMode) throw new Error('No valid element provided.');
+
+            return;
         }
 
         this.el = element;
