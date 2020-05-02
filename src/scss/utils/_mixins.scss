@@ -110,11 +110,12 @@
     clear: both;
 }
 
-@mixin mainFlex($justify: space-between, $align: center, $flexDirection: initial) {
+@mixin mainFlex($justify: space-between, $align: center, $flexDirection: initial, $wrap: wrap) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction: $flexDirection;
+    flex-wrap: $wrap;
 }
 
 @mixin checkmark($bg, $color, $radius) {

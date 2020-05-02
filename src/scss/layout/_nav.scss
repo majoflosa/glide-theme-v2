@@ -1,0 +1,65 @@
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(white, 0.2);
+    @include mainFlex();
+    padding: rem(30);
+    z-index: 10;
+    @include mainTransition();
+
+    &__brand {
+        a {
+            color: white;
+        }
+    }
+
+    &__menu {
+        &-link, a {
+            @include font-line-size(14, 16);
+            font-family: $font-header;
+            text-transform: uppercase;
+            color: white;
+            display: inline-block;
+            margin: 0 rem(8);
+
+            &:hover, &--active {
+                text-decoration: none;
+                color: $color-secondary-light;
+            }
+
+            &--btn {
+                background-color: white;
+                color: $color-secondary-dark !important;
+                padding: rem(10) rem(15) !important;
+                border-radius: $box-radius;
+            }
+        }
+    }
+
+    &.sticky {
+        position: fixed;
+        padding: rem(20) rem(20);
+        background-color: rgba(white, 0.95);
+        border-bottom: 1px solid $color-secondary-light;
+
+        &-link, a {
+            color: $color-secondary;
+
+            &:hover {
+                color: $color-secondary-dark;
+            }
+        }
+        
+        a.nav__menu-link--active {
+            color: $color-secondary-dark;
+        }
+
+        a.nav__menu-link--btn {
+            color: white !important;
+            background-color: $color-secondary-dark !important;
+        }
+    }
+}
