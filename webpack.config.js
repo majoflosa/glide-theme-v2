@@ -5,9 +5,9 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const env = process.env.NODE_ENV;
 
 module.exports = {
-    entry: ['@babel/polyfill', './assets/src/js/index.js'],
+    entry: ['@babel/polyfill', './src/js/index.js'],
     output: {
-        path: path.resolve( __dirname, 'assets/dist'),
+        path: path.resolve( __dirname, 'dist'),
         filename: 'js/main.js',
     },
     resolve: {
@@ -15,8 +15,8 @@ module.exports = {
     },
     devtool: 'source-map',
     devServer: {
-        publicPath: '/assets/dist/',
-        contentBase: './', // './app/dist/js',
+        publicPath: '/',
+        contentBase: './dist',
         watchContentBase: true,
         historyApiFallback: true,
         open: true,
@@ -37,7 +37,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new SVGSpritemapPlugin('./assets/src/svg/*.svg', {
+        new SVGSpritemapPlugin('./src/svg/*.svg', {
             output: {
                 filename: 'svg/icons.svg',
             },
