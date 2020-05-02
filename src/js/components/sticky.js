@@ -36,10 +36,15 @@ class Sticky extends BaseComponent {
      * options argument is provided
      * = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
     getDefaultOptions() {
-        return {
-            stickyPointOffset: 0,
-            stickyClass: 'sticky'
-        };
+        // check if options were passed as data- attributes; if not, set defaults
+        const stickyPointOffset = this.$el.data('offset') !== undefined 
+            ? this.$el.data('offset') 
+            : 0;
+        const stickyClass = this.$el.data('sticky-class') !== undefined
+            ? this.$el.data('sticky-class')
+            : 'sticky';
+
+        return { stickyPointOffset, stickyClass };
     }
 }
 
